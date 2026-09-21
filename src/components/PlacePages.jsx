@@ -26,7 +26,7 @@ export function PlaceListPage({ category }) {
       </div>
       <div className="place-grid">
         {items.map((place) => (
-          <article className="place-card" key={place.slug}>
+          <article className={`place-card place-${place.slug}`} key={place.slug}>
             <Link className="place-card-image" to={`/place/${place.slug}`} aria-label={`查看 ${place.name} 詳情`}><img src={place.cover} alt={`${place.name} 封面`} loading="lazy" /></Link>
             <div className="place-card-copy">
               <span className="place-card-category">{info.title}</span>
@@ -59,7 +59,7 @@ export function PlaceDetailPage() {
         <h1>{place.name}</h1>
         <p className="place-detail-position">{place.position}</p>
       </header>
-      <img className="place-detail-cover" src={place.cover} alt={`${place.name} 封面`} />
+      <div className={`place-cover-frame place-${place.slug}`}><img className="place-detail-cover" src={place.cover} alt={`${place.name} 封面`} /></div>
       <section className="place-description-section">
         <h2>♡ 為什麼推薦</h2>
         <p>{place.description}</p>

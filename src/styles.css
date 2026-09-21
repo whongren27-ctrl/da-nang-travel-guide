@@ -62,7 +62,8 @@ html,body,#root{max-width:100%;overflow-x:hidden}
 .place-detail-heading{margin-bottom:22px}
 .place-detail-heading h1{margin:8px 0 0}
 .place-map-link{display:inline-flex;align-items:center;gap:6px;margin-top:12px;background:#fff0e6;border-radius:999px;padding:9px 14px;color:#234b73;font-size:13px}
-.place-detail-cover{display:block;width:100%;max-height:610px;aspect-ratio:4/3;object-fit:cover;object-position:center;background:#f4efe8;border-radius:24px;border:1px solid #eee3d9}
+.place-cover-frame{display:block;width:100%;max-height:610px;aspect-ratio:4/3;overflow:hidden;background:#f4efe8;border-radius:24px;border:1px solid #eee3d9}
+.place-detail-cover{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
 .place-gallery-section{margin-top:40px}
 .place-gallery-section h2{display:flex;align-items:baseline;gap:14px;color:#173e6a;font-size:22px;margin:0 0 16px}
 .place-gallery-section h2 span{font:600 10px 'DM Sans',sans-serif;letter-spacing:2px;color:#b48273}
@@ -71,9 +72,11 @@ html,body,#root{max-width:100%;overflow-x:hidden}
 .place-not-found{min-height:65vh;display:grid;place-content:center;text-align:center;color:var(--navy)}
 .place-not-found a{margin-top:14px;color:#bd8d7b}
 .place-card{display:flex;flex-direction:column;color:inherit;text-decoration:none}
-.place-card-image{display:block;flex:none}
+.place-card-image{display:block;flex:none;width:100%}
 .place-card-image img{display:block;object-fit:cover;object-position:center;transition:transform .45s ease}
 .place-card:hover .place-card-image img{transform:scale(1.035)}
+.place-card.place-bun-cha-ca-109 .place-card-image img,.place-cover-frame.place-bun-cha-ca-109 .place-detail-cover{transform:scale(1.16);transform-origin:left center}
+.place-card.place-bun-cha-ca-109:hover .place-card-image img{transform:scale(1.19);transform-origin:left center}
 .place-card-copy{display:flex;flex:1;flex-direction:column;align-items:flex-start;gap:7px;padding:17px 18px 16px;min-width:0}
 .place-card-copy .place-card-category{grid-column:auto}
 .place-card-copy h2{max-width:100%;font-size:20px;line-height:1.25;overflow-wrap:anywhere}
@@ -113,7 +116,8 @@ html,body,#root{max-width:100%;overflow-x:hidden}
  .place-card-actions{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-start;gap:9px;width:100%;min-width:0;margin-top:2px;padding-top:9px}
  .place-card-link,.place-card-map{min-height:36px;max-width:100%;font-size:12px}
  .place-card-map{padding:7px 10px}
- .place-detail-cover{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
+ .place-cover-frame{width:100%;height:auto;aspect-ratio:4/3}
+ .place-detail-cover{width:100%;height:100%;aspect-ratio:auto;object-fit:cover}
  .place-description-section{box-sizing:border-box;width:100%;max-width:100%;overflow-wrap:anywhere}
  .place-gallery{grid-template-columns:minmax(0,1fr)}
  .place-map-link{width:fit-content;max-width:100%;white-space:normal}

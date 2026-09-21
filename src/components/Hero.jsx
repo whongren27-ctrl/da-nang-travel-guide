@@ -13,7 +13,7 @@ export default function Hero(){
    <div className="hero-scene" aria-hidden="true"></div><div className="hero-wash" aria-hidden="true"></div>
    <div className="hero-content"><div className="hero-copy"><p className="hero-hello">Hello <span>♡</span></p><h1 className="hero-title">Da Nang</h1><div className="yellow-stroke"></div><h2>吃 · 玩 · 放鬆 · 剛剛好</h2><p className="hero-sub">2天1夜 · 美食 × 海風 × 慢生活</p><div className="brush-tag">一場說走就走的美食之旅 <span>♡</span></div></div>
    <div className="hero-art" aria-hidden="true"><div className="art-note">Good Food<br/>Good Mood<br/><small>in Da Nang :)</small></div><div className="photo-card"><img src={`${import.meta.env.BASE_URL}assets/hero-beach.png`} alt="峴港海灘手繪風景"/><span>My favorite place <b>♡</b></span></div></div>
-   <div className="floating-note">Life is better<br/>by the beach <span>♡</span></div><span className="doodle-star star-one">✳</span><span className="doodle-star star-two">✦</span><span className="flight-path">⌁ ⌁ ⌁</span>
+   <div className="floating-note">Life is better<br/>by the beach <span>♡</span></div><span className="doodle-star star-one" aria-hidden="true">✦︎</span><span className="doodle-star star-two" aria-hidden="true">✦︎</span><span className="flight-path">⌁ ⌁ ⌁</span>
    </div>
   </section>
 }
