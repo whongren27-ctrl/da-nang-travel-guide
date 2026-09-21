@@ -94,6 +94,30 @@ html,body,#root{max-width:100%;overflow-x:hidden}
 .place-map-link{width:max-content;max-width:100%;margin-top:28px;padding:13px 19px;background:#e9f5ec;border:1px solid #d1e5d4;color:#234b55;font-weight:600}
 @media(max-width:900px){.place-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.place-page,.place-detail{padding:34px 16px 64px}.place-page-heading{margin-bottom:24px}.place-page-heading h1,.place-detail-heading h1{font-size:42px}.place-page-heading p{font-size:13px}.place-grid{grid-template-columns:1fr;gap:15px}.place-card{display:grid;grid-template-columns:36% minmax(0,1fr);align-items:stretch}.place-card-image{aspect-ratio:1/1;height:100%;min-height:160px}.place-card-copy{padding:13px 12px;gap:6px}.place-card-copy h2{font-size:17px}.place-card-description{-webkit-line-clamp:3;font-size:12px}.place-card-position{font-size:12px}.place-tags{gap:5px}.place-tag{min-height:23px;padding:3px 8px;font-size:10px}.place-card-actions{flex-wrap:wrap;justify-content:flex-start;gap:10px;margin-top:2px;padding-top:6px}.place-detail-cover{border-radius:17px}.place-description-section{margin-top:22px;padding:19px 17px;border-radius:18px}.place-description-section h2{font-size:19px}.place-description-section>p{font-size:14px;line-height:1.8}.place-gallery{grid-template-columns:1fr;gap:13px}.place-gallery-section{margin-top:30px}.place-map-link{margin-top:22px}}
+/* Mobile place directory: keep the photo and its text in a readable vertical flow. */
+@media(max-width:600px){
+ .place-page,.place-detail{box-sizing:border-box;width:100%;max-width:100%;min-width:0;padding-inline:16px}
+ .place-page-heading,.place-grid,.place-card,.place-card-copy{min-width:0;max-width:100%}
+ .place-page-heading h1,.place-detail-heading h1{font-size:clamp(36px,10vw,42px);overflow-wrap:anywhere}
+ .place-page-heading p{max-width:32ch;margin-inline:auto;line-height:1.7}
+ .place-grid{grid-template-columns:minmax(0,1fr);gap:18px}
+ .place-card{display:flex;flex-direction:column;align-items:stretch;width:100%;height:auto}
+ .place-card-image{display:block;width:100%;height:auto;min-height:0;aspect-ratio:16/10;flex:none}
+ .place-card-image img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+ .place-card-copy{display:flex;flex-direction:column;align-items:flex-start;width:100%;min-width:0;padding:16px 16px 15px;gap:7px}
+ .place-card-copy h2{font-size:19px;line-height:1.3;overflow-wrap:anywhere}
+ .place-card-position,.place-card-description{display:block;width:100%;min-width:0;max-width:100%;white-space:normal;overflow-wrap:anywhere;word-break:break-word}
+ .place-card-description{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden;font-size:13px;line-height:1.65}
+ .place-tags{width:100%;min-width:0;gap:6px}
+ .place-tag{max-width:100%;min-height:25px;padding:4px 9px;font-size:11px;white-space:normal;overflow-wrap:anywhere}
+ .place-card-actions{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-start;gap:9px;width:100%;min-width:0;margin-top:2px;padding-top:9px}
+ .place-card-link,.place-card-map{min-height:36px;max-width:100%;font-size:12px}
+ .place-card-map{padding:7px 10px}
+ .place-detail-cover{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
+ .place-description-section{box-sizing:border-box;width:100%;max-width:100%;overflow-wrap:anywhere}
+ .place-gallery{grid-template-columns:minmax(0,1fr)}
+ .place-map-link{width:fit-content;max-width:100%;white-space:normal}
+}
 @media(max-width:740px){
  .site-header .nav-shell{position:relative}
  .site-header .nav-actions{position:absolute;right:16px;top:16px;display:flex!important;width:38px;height:38px;margin:0;z-index:8}
